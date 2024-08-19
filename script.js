@@ -16,6 +16,7 @@ function GuessTheNumber() {
     answer = answer + 1
     while (userGuess != answer){
         userGuess = prompt ('Guess what the number is!')
+        userGuess = userGuess.trim()
         alert ('That was wrong. Try again')
         userScore = userScore + 1
   if (userGuess == answer){
