@@ -34,7 +34,7 @@ function GuessTheNumber() {
         //compares user guess to the answer. If correct, outputs congradgulations message and pushes score onto the scoreboard. If wrong, outputs "Thats wrong. Try again" then the question will repeat.
         if (userGuess == answer){
             alert('Well done that is the correct number')
-            results.push (name + ' = ' + userScore)
+            results.push ('\n' + name + ' = ' + userScore)
          } else if (userGuess != answer && userGuess <= maximum && userGuess >= minimum){
             alert ('That was wrong. Try again')
             //Checks if an answer is invalid or outside the number range. Outputs a invalid message then allows the user to try again.
