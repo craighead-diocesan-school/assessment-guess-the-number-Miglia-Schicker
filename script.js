@@ -16,7 +16,7 @@ function GuessTheNumber() {
   const point = 1
   const raise = 1
 
-  //computer picks a random number from 1-20 inclusive.
+  //computer secretly picks a random number from 1-20 inclusive.
   let index = Math.floor(Math.random() * maximum)
   //raise the random number by one so it is between 1-20 instead of 0-19
   let answer = index + raise
