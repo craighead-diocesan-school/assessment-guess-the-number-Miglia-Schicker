@@ -30,7 +30,7 @@ function GuessTheNumber() {
     //compares user guess to the answer. If correct, outputs congradgulations message and pushes score onto the scoreboard. If wrong, it will compare and see if the guess is bigger or smaller than the answer and outputs a message which tells the user if their guess was too small or too big.
     if (userGuess == answer) {
       alert("Well done that is the correct number")
-      results.push("\n" + name + " = " + userScore)
+      results.push("\n" + name + " : " + userScore)
     } else if (userGuess > answer && userGuess <= maximum && userGuess >= minimum) {
       alert("That guess is too big. Try again")
     } else if (userGuess < answer && userGuess <= maximum && userGuess >= minimum) {
