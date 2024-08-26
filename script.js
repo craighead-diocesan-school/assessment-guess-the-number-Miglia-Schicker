@@ -13,13 +13,11 @@ function GuessTheNumber() {
   //declaring variables with const that will not be reassigned a new variable
   const maximum = 20
   const minimum = 1
-  const point = 1
-  const raise = 1
 
   //computer secretly picks a random number from 1-20 inclusive.
   let index = Math.floor(Math.random() * maximum)
   //raise the random number by one so it is between 1-20 instead of 0-19
-  let answer = index + raise
+  let answer = index + 1
 
   //compares users guess to the answer. If it is wrong then the question is asked again and a point is added to their score.
   while (userGuess != answer) {
@@ -28,7 +26,7 @@ function GuessTheNumber() {
     userGuess = userGuess.trim()
     //Turn the user guess into a number so it can be accurately compared to the answer instead of becoming a string
     userGuess = Number(userGuess)
-    userScore = userScore + point
+    userScore = userScore + 1
 
     //compares user guess to the answer. If correct, outputs congratulations message and pushes score onto the scoreboard. If wrong, it will compare and see if the guess is bigger or smaller than the answer and outputs a message which tells the user if their guess was too small or too big.
     if (userGuess == answer) {
@@ -42,10 +40,10 @@ function GuessTheNumber() {
       //Checks if an answer is invalid or outside the number range. Outputs a invalid message then allows the user to try again. If the answer is invalid the point origionally added to their score from that round will be taken away so that guess will not affect their score.
     } else if (userGuess > maximum || userGuess < minimum) {
       alert("That number seems to be outside of the range. Try again with a number from 1 - 20")
-      userScore = userScore - point
+      userScore = userScore - 1
     } else {
       alert("That is an invalid answer. Try again with a number from 1 - 20")
-      userScore = userScore - point
+      userScore = userScore - 1
     }
   }
 }
